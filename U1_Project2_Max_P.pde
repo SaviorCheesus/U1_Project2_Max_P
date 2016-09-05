@@ -1,12 +1,16 @@
 /*
-Hello fellow human. It apears that you have found my creation. If somehow happen to lack basic computer gaming knowledge,
-I will provide you with some basic advice. You will use the WASD keys in a similer fassion to arrow keys to move throughout a 2 dimensional lieu.
+Hello fellow human. It apears that you have found my creation. 
+If somehow happen to lack basic computer gaming knowledge,
+I will provide you with some basic advice. You will use the WASD keys 
+in a similer fassion to arrow keys to move throughout a 2 dimensional lieu.
+Attempt to overcome obstacles in your persuit to get to your terminal destination.
+Feel free to peruse my numeric masterpiece!
 */
 
 Float MoveX = 700.0; //X coodrinate
 Float MoveY = 700.0; //Y coordinate
 Float Movement = 8.0; //Speed of the character
-Float Mode = 0.0; //Level Value
+Float Mode = 3.0; //Level Value
 Float colour1 = 255.0; //Obstacle R colour value
 Float colour2 = 255.0; //Obstacle G colour value
 Float colour3 = 255.0; //Obstacle B colour value
@@ -18,7 +22,6 @@ Float Random = 0.0; //Ussed in dilation effect
 void setup ()
 {
   fullScreen();
-  smooth (0); //Turns of antialiasing for a more ATARI like apearence
 }
 
 void draw ()
@@ -186,10 +189,10 @@ void draw ()
   {
     // Diagonal Platform I
     rect (250 - Dilate, 0 - Dilate ,20 + (Dilate * 2), 800 + (Dilate * 2));
-    if (MoveX  >= 250 && MoveX <= 50 && 
-    MoveY  >= 740 && MoveY <= 750)
+    if (MoveX  >= 240 && MoveX <= 260 && 
+    MoveY  >= 00 && MoveY <= 800)
     {
-      MoveX = 490.0; // Left Collision
+      MoveX = 240.0; // Left Collision
     }
     if (MoveX >= 260 && MoveX <= 280 && 
     MoveY >= 0 && MoveY <= 800)
@@ -216,7 +219,7 @@ void draw ()
       MoveY = 780.0; // Bottom Collision
     }
 
-        //Horizontal Platform II
+    //Horizontal Platform II
     rect (500 - Dilate, 650 - Dilate ,250 + (Dilate * 2),20 + (Dilate * 2));
     if (MoveX  >= 500 && MoveX <= 510 && 
     MoveY >= 650 && MoveY <= 660)
@@ -464,18 +467,249 @@ void draw ()
   }
   
     if (Mode == 2.0)
-  {
-    if (MoveX <= 1360 && MoveX >= 1280 && MoveY >= 80 && MoveY <= 160)
+  { 
+    //Horizontal Platform I
+    rect (200 - Dilate, 200 - Dilate ,1250 + (Dilate * 2),20 + (Dilate * 2));
+    if (MoveX >= 200 && MoveX <= 210 && 
+    MoveY >= 200 && MoveY <= 210)
     {
-      Mode = 2.0;
+      MoveX = 200.0; // Left  Collision
+    }
+      if (MoveX >= 200 && 
+      MoveY >=180 && MoveY <= 190)
+    {
+      MoveY = 180.0; // Top Collision
+    }
+      if (MoveX >= 200 && 
+      MoveY >=220 && MoveY <= 230)
+    {
+      MoveY = 230.0; // Bottom Collision
     }
     
+    //Horizontal Platform II
+    rect (0 - Dilate, 350 - Dilate ,1250 + (Dilate * 2),20 + (Dilate * 2));
+    if (MoveX >= 1240 && MoveX <= 1250 && 
+    MoveY >= 350 && MoveY <= 360)
+    {
+      MoveX = 1250.0; // Left  Collision
+    }
+      if (MoveX <= 1250 && 
+      MoveY >=330 && MoveY <= 340)
+    {
+      MoveY = 330.0; // Top Collision
+    }
+      if (MoveX <= 1250 && 
+      MoveY >=370 && MoveY <= 380)
+    {
+      MoveY = 380.0; // Bottom Collision
+    }
+    
+    //Horizontal Platform III
+    rect (200 - Dilate, 500 - Dilate ,1250 + (Dilate * 2),20 + (Dilate * 2));
+    if (MoveX >= 200 && MoveX <= 210 && 
+    MoveY >= 500 && MoveY <= 510)
+    {
+      MoveX = 500.0; // Left  Collision
+    }
+      if (MoveX >= 200 && 
+      MoveY >=480 && MoveY <= 490)
+    {
+      MoveY = 480.0; // Top Collision
+    }
+      if (MoveX >= 200 && 
+      MoveY >=520 && MoveY <= 530)
+    {
+      MoveY = 530.0; // Bottom Collision
+    }
+    //Horizontal Platform IV
+    rect (0 - Dilate, 650 - Dilate ,1250 + (Dilate * 2),20 + (Dilate * 2));
+    if (MoveX >= 1240 && MoveX <= 1250 && 
+    MoveY >= 650 && MoveY <= 660)
+    {
+      MoveX = 1250.0; // Left  Collision
+    }
+      if (MoveX <= 1250 && 
+      MoveY >=630 && MoveY <= 640)
+    {
+      MoveY = 630.0; // Top Collision
+    }
+      if (MoveX <= 1250 && 
+      MoveY >=670 && MoveY <= 680)
+    {
+      MoveY = 680.0; // Bottom Collision
+    }
     colour1 = 150.0;
     colour2 = 0.0;
     colour3 = 150.0;
     colour4 = 0.0;
     colour5 = 0.0;
     colour6 = 0.0;
+    rect (80 - Dilate ,750 - Dilate ,80 + (Dilate * 2),80 + (Dilate * 2));
+    if (MoveX <= 160 && MoveX >= 80 && MoveY >= 750 && MoveY <= 1460)
+    {
+      Mode = 3.0;
+    }
+  }
+  if (Mode == 3.0)
+  {
+    // Diagonal Platform I
+    rect (200 - Dilate, 200 - Dilate ,20 + (Dilate * 2), 700 + (Dilate * 2));
+    if (MoveX  >= 190 && MoveX <= 200 && 
+    MoveY  >= 200 && MoveY <= 900)
+    {
+      MoveX = 190.0; // Left Collision
+    }
+    if (MoveX >= 210 && MoveX <= 230 && 
+    MoveY >= 200 && MoveY <= 900)
+    {
+      MoveX = 230.0; // Right  Collision
+    }
+    
+    //Horizontal Platform I
+    rect (200 - Dilate, 200 - Dilate ,1000 + (Dilate * 2),20 + (Dilate * 2));
+      if (MoveX >= 200 && MoveX <= 1200 &&
+      MoveY >=180 && MoveY <= 190)
+    {
+      MoveY = 180.0; // Top Collision
+    }
+      if (MoveX >= 200 && MoveX <=1200 && 
+      MoveY >=220 && MoveY <= 230)
+    {
+      MoveY = 230.0; // Bottom Collision
+    }
+    
+    // Diagonal Platform II
+    rect (1200 - Dilate, 200 - Dilate ,20 + (Dilate * 2), 500 + (Dilate * 2));
+    if (MoveX  >= 1190 && MoveX <= 1200 && 
+    MoveY  >= 200 && MoveY <= 700)
+    {
+      MoveX = 1190.0; // Left Collision
+    }
+    if (MoveX >= 1210 && MoveX <= 1230 && 
+    MoveY >= 200 && MoveY <= 700)
+    {
+      MoveX = 1230.0; // Right  Collision
+    }
+    
+    // Horizontal Platform II
+    rect (300 - Dilate, 680 - Dilate ,900 + (Dilate * 2),20 + (Dilate * 2));
+    if (MoveX >= 300 && MoveX <= 1200 &&
+      MoveY >=670 && MoveY <= 680)
+    {
+      MoveY = 670.0; // Top Collision
+    }
+      if (MoveX >= 300 && MoveX <=1200 && 
+      MoveY >=700 && MoveY <= 710)
+    {
+      MoveY = 710.0; // Bottom Collision
+    }
+    
+    // Diagonal Platform III
+    rect (300 - Dilate, 300 - Dilate ,20 + (Dilate * 2), 400 + (Dilate * 2));
+    if (MoveX  >= 290 && MoveX <= 300 && 
+    MoveY  >= 300 && MoveY <= 700)
+    {
+      MoveX = 290.0; // Left Collision
+    }
+    if (MoveX >= 320 && MoveX <= 330 && 
+    MoveY >= 200 && MoveY <= 700)
+    {
+      MoveX = 330.0; // Right  Collision
+    }
+    
+    // Horizontal Platform III
+    rect (300 - Dilate, 300 - Dilate ,800 + (Dilate * 2),20 + (Dilate * 2));
+    if (MoveX >= 300 && MoveX <= 1100 &&
+      MoveY >=280 && MoveY <= 290)
+    {
+      MoveY = 280.0; // Top Collision
+    }
+      if (MoveX >= 300 && MoveX <=1100 && 
+      MoveY >=300 && MoveY <= 330)
+    {
+      MoveY = 330.0; // Bottom Collision
+    }
+    
+    // Diagonal Platform IV
+    rect (1090 - Dilate, 300 - Dilate ,20 + (Dilate * 2), 300 + (Dilate * 2));
+    if (MoveX  >= 1080 && MoveX <= 1100 && 
+    MoveY  >= 300 && MoveY <= 600)
+    {
+      MoveX = 1080.0; // Left Collision
+    }
+    if (MoveX >= 1110 && MoveX <= 1120 && 
+    MoveY >= 300 && MoveY <= 600)
+    {
+      MoveX = 1120.0; // Right  Collision
+    }
+    
+    // Horizontal Platform IV
+    rect (400 - Dilate, 580 - Dilate ,700 + (Dilate * 2),20 + (Dilate * 2));
+    if (MoveX >= 400 && MoveX <= 1100 &&
+      MoveY >=570 && MoveY <= 580)
+    {
+      MoveY = 570.0; // Top Collision
+    }
+      if (MoveX >= 400 && MoveX <=1100 && 
+      MoveY >=600 && MoveY <= 610)
+    {
+      MoveY = 610.0; // Bottom Collision
+    }
+        
+    // Horizontal Platform IV
+    rect (400 - Dilate, 400 - Dilate ,600 + (Dilate * 2),20 + (Dilate * 2));
+    if (MoveX >= 400 && MoveX <= 1000 &&
+      MoveY >=380 && MoveY <= 390)
+    {
+      MoveY = 380.0; // Top Collision
+    }
+      if (MoveX >= 400 && MoveX <=0100 && 
+      MoveY >=600 && MoveY <= 610)
+    {
+      MoveY = 610.0; // Bottom Collision
+    }
+    
+    // Diagonal Platform V
+    rect (400 - Dilate, 400 - Dilate ,20 + (Dilate * 2), 200 + (Dilate * 2));
+    if (MoveX  >= 390 && MoveX <= 400 && 
+    MoveY  >= 400 && MoveY <= 600)
+    {
+      MoveX = 390.0; // Left Collision
+    }
+    if (MoveX >= 420 && MoveX <= 430 && 
+    MoveY >= 400 && MoveY <= 600)
+    {
+      MoveX = 430.0; // Right  Collision
+    }
+   
+    colour1 = 10.0;
+    colour2 = 10.0;
+    colour3 = 10.0;
+    colour4 = 0.0;
+    colour5 = 60.0;
+    colour6 = 125.0;
+    fill (random (0,255));
+    ellipse (500 - Dilate ,500 - Dilate ,80 + Dilate, 80 + Dilate);
+    if (MoveX >= 460 && MoveX <= 540 &&
+    MoveY >= 460 && MoveY <= 540)
+    {
+      Mode = 4.0;
+    }
+  }
+  
+  if (Mode == 4.0)
+  {
+    textSize (40);
+    text ("Conglaturations! Your Winner!",400,400);
+    text ("A Winner Is You!",400,500);
+    textSize (7);
+    text ("bastud",400,600);
+    colour1 = random (0,200);
+    colour2 = random (0,200);
+    colour3 = 10.0;
+    colour4 = 255.0;
+    colour5 = 255.0;
+    colour6 = 255.0;
   }
 
   //CONTROLS
@@ -485,7 +719,7 @@ void draw ()
   }
   else
   {
-    MoveY += 8; //Gravity
+    // MoveY += 8; //Gravity
   }
   
   if (keyPressed == true && key == 'a' && key == 'w')
