@@ -10,7 +10,7 @@ Feel free to peruse my numeric masterpiece!
 Float MoveX = 700.0; //X coodrinate
 Float MoveY = 700.0; //Y coordinate
 Float Movement = 8.0; //Speed of the character
-Float Mode = 3.0; //Level Value
+Float Mode = 0.0; //Level Value
 Float colour1 = 255.0; //Obstacle R colour value
 Float colour2 = 255.0; //Obstacle G colour value
 Float colour3 = 255.0; //Obstacle B colour value
