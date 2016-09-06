@@ -719,7 +719,7 @@ void draw ()
   }
   else
   {
-    // MoveY += 8; //Gravity
+    MoveY += 8; //Gravity
   }
   
   if (keyPressed == true && key == 'a' && key == 'w')
