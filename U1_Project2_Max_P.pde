@@ -18,6 +18,7 @@ Float colour4 = 0.0; //Background R colour value
 Float colour5 = 0.0; //Background G colour value
 Float colour6 = 0.0; //Background B colour value
 Float Random = 0.0; //Ussed in dilation effect
+Float gravity = -10.0; // self explanitory
 
 void setup ()
 {
@@ -719,7 +720,7 @@ void draw ()
   }
   else
   {
-    MoveY += 8; //Gravity
+    MoveY -= gravity; //Gravity
   }
   
   if (keyPressed == true && key == 'a' && key == 'w')
